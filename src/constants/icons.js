@@ -2,6 +2,8 @@ const checkmark = require("../../assets/PaqueteAtomic/checkmark.png");
 const twitter = require("../../assets/PaqueteAtomic/twitter.png");
 const linkedin = require("../../assets/PaqueteAtomic/linkedin.png");
 
+const love = require("../../assets/PaqueteAtomic/heart.png");
+
 const locked = require("../../assets/PaqueteAtomic/ic_lock_24px.png");
 const downArrow = require("../../assets/PaqueteAtomic/Group4013.png");
 const upArrow = require("../../assets/PaqueteAtomic/Group4013Up.png");
@@ -23,4 +25,5 @@ export default {
   numberTwo,
   numberTwoGray,
   locked,
+  love,
 };

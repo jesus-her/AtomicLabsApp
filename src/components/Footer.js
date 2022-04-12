@@ -1,8 +1,10 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { COLORS, SIZES, FONTS } from "../constants";
+import { Linking, StyleSheet, Text, View } from "react-native";
+import { COLORS, SIZES, FONTS, icons } from "../constants";
 
 import SocialMedia from "./SocialMedia";
+import IconLabel from "./IconLabel";
+import CustomButton from "./CustomButton";
 
 const Footer = () => {
   return (
@@ -15,6 +17,17 @@ const Footer = () => {
           </Text>
         </Text>
         <SocialMedia />
+      </View>
+      <View style={styles.footer}>
+        <IconLabel
+          icon={icons.love}
+          iconStyle={{ width: 25, height: 25 }}
+          label="Hecho con amor."
+        />
+        <CustomButton
+          onPress={() => Linking.openURL("https://jesushernandez.netlify.app/")}
+          label="¡Más acerca de mí!"
+        />
       </View>
     </View>
   );
@@ -31,7 +44,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     width: "100%",
-    height: "50%",
+    height: "45%",
     justifyContent: "space-around",
     alignItems: "center",
   },
