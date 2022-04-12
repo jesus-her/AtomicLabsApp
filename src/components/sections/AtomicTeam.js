@@ -1,11 +1,12 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../../constants";
-import AboutTitle from "../sectionsTitles/AboutTitle";
 import { LinearGradient } from "expo-linear-gradient";
-import Onboarding from "../Onboarding/Onboarding";
 
-const About = () => {
+import AtomicTeamTitle from "../sectionsTitles/AtomicTeamTitle";
+import StackCarousel from "../StackCarousel";
+
+const AtomicTeam = () => {
   return (
     <LinearGradient
       colors={[COLORS.primary, "#052241"]}
@@ -13,8 +14,8 @@ const About = () => {
       end={{ x: 1, y: 1 }}
       style={styles.container}
     >
-      <AboutTitle />
-      <Onboarding />
+      <AtomicTeamTitle />
+      <StackCarousel />
     </LinearGradient>
   );
 };
@@ -23,10 +24,10 @@ const styles = StyleSheet.create({
   container: {
     width: SIZES.width,
     height: SIZES.height,
-    padding: SIZES.padding,
+    paddingTop: SIZES.padding,
     justifyContent: "space-between",
     alignItems: "center",
   },
 });
 
-export default About;
+export default AtomicTeam;

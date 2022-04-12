@@ -1,8 +1,6 @@
 import React from "react";
-import { Text, StatusBar, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
 import { COLORS, FONTS } from "../../constants";
-
-console.log(StatusBar.currentHeight);
 
 const HomeTitle = () => {
   return (

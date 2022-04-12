@@ -1,16 +1,15 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StatusBar, StyleSheet } from "react-native";
 import { COLORS, FONTS } from "../../constants";
 
-const AboutTitle = () => {
+const WorkWithUsTitle = () => {
   return (
     <>
       <Text style={styles.paragraph}>
-        Somos el brazo
+        ¡Te encantará
         {"\n"}
-        derecho
-        <Text style={styles.highlight}> de la {"\n"}</Text>
-        <Text style={styles.highlight}>tecnología</Text>
+        <Text style={styles.highlight}>trabajar con {"\n"}</Text>
+        <Text style={styles.highlight}>nosotros {"\n"}</Text>
       </Text>
     </>
   );
@@ -29,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AboutTitle;
+export default WorkWithUsTitle;

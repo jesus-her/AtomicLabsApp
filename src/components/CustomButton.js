@@ -2,11 +2,21 @@ import React from "react";
 import { TouchableOpacity, Text, Image, StyleSheet, View } from "react-native";
 import { COLORS, FONTS, SIZES } from "../constants";
 
-const CustomButton = ({ label, onPress, icon, backgroundColor }) => {
+const CustomButton = ({
+  label,
+  onPress,
+  icon,
+  backgroundColor,
+  containerStyle,
+}) => {
   return (
     <TouchableOpacity
       activeOpacity={0.75}
-      style={styles.container}
+      style={{
+        width: SIZES.width / 2,
+        height: SIZES.height / 16,
+        ...containerStyle,
+      }}
       onPress={onPress}
     >
       <View
@@ -29,10 +39,6 @@ const CustomButton = ({ label, onPress, icon, backgroundColor }) => {
   );
 };
 const styles = StyleSheet.create({
-  container: {
-    width: SIZES.width / 2,
-    height: 50,
-  },
   icon: {
     width: 20,
     height: 20,

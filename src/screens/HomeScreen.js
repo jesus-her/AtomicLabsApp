@@ -1,28 +1,42 @@
 import React from "react";
-import { StatusBar, ScrollView, StyleSheet } from "react-native";
-import { COLORS, images, SIZES, icons } from "../constants";
-import Home from "../components/sections/Home";
+import { ScrollView } from "react-native";
+import { SIZES } from "../constants";
+import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
+import WorkWithUs from "../components/sections/WorkWithUs";
+import AtomicTeam from "../components/sections/AtomicTeam";
+import Footer from "../components/Footer";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
+  /*Function for ScrollTo*/
+  this.scrollListRefTop = undefined;
+
+  const onPressTouch = () => {
+    this.scrollListRefTop.scrollTo({
+      x: 0,
+      y: SIZES.height,
+      animated: true,
+    });
+  };
+
   return (
-    <ScrollView
-      style={styles.container}
-      pagingEnabled={true}
-      showsVerticalScrollIndicator={false}
-    >
-      <StatusBar backgroundColor={COLORS.primary} hidden={false} />
-      <Home />
-      <About />
-    </ScrollView>
+    <>
+      <ScrollView
+        ref={(ref) => {
+          this.scrollListRefTop = ref;
+        }}
+        style={{ flex: 1 }}
+        pagingEnabled={false}
+        showsVerticalScrollIndicator={false}
+      >
+        <Hero onPressTouch={onPressTouch} />
+        <About />
+        <WorkWithUs />
+        <AtomicTeam />
+        <Footer />
+      </ScrollView>
+    </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    width: SIZES.width,
-    height: SIZES.height,
-  },
-});
 
 export default HomeScreen;
